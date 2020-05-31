@@ -1,0 +1,10 @@
+sudo perf stat -d -d -o ./result_log/1.log python3 filter1.py
+sudo perf stat -d -d -o ./result_log/2.log python3 filter2.py
+sudo perf stat -d -d -o ./result_log/3.log python3 filter3.py
+sudo perf stat -d -d -o ./result_log/4.log python3 filter4.py
+sudo perf stat -d -d -o ./result_log/5.log python3 filter5.py
+sudo perf stat -d -d -o ./result_log/6.log python3 filter6.py
+sudo perf stat -d -d -o ./result_log/7.log python3 filter7.py
+sudo perf stat -d -d -o ./result_log/8.log python3 filter8.py
+sudo perf stat -d -d -o ./result_log/9.log python3 filter9.py
+sudo perf stat -d -d -o ./result_log/10.log python3 filter10.py
