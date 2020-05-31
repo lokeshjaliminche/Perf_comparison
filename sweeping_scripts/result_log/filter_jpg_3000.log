@@ -1,0 +1,26 @@
+# started on Sun May 31 15:36:36 2020
+
+
+ Performance counter stats for 'python3 /home/ljaliminche/Desktop/CSE220/project/Latest/sweeping_scripts/jpg/filter_jpg_3000.py':
+
+        583.422606      task-clock (msec)         #    2.134 CPUs utilized          
+               156      context-switches          #    0.267 K/sec                  
+                 0      cpu-migrations            #    0.000 K/sec                  
+             7,022      page-faults               #    0.012 M/sec                  
+    1,68,26,76,637      cycles                    #    2.884 GHz                      (31.90%)
+    1,25,52,80,131      instructions              #    0.75  insn per cycle           (39.81%)
+      25,72,21,440      branches                  #  440.884 M/sec                    (40.49%)
+         84,22,411      branch-misses             #    3.27% of all branches          (40.68%)
+      38,97,38,692      L1-dcache-loads           #  668.021 M/sec                    (39.03%)
+       1,69,22,322      L1-dcache-load-misses     #    4.34% of all L1-dcache hits    (38.49%)
+         47,49,261      LLC-loads                 #    8.140 M/sec                    (29.90%)
+         12,30,999      LLC-load-misses           #   25.92% of all LL-cache hits     (29.87%)
+   <not supported>      L1-icache-loads                                             
+         56,08,810      L1-icache-load-misses                                         (30.23%)
+      36,92,23,629      dTLB-loads                #  632.858 M/sec                    (29.60%)
+          6,37,809      dTLB-load-misses          #    0.17% of all dTLB cache hits   (29.61%)
+         14,74,646      iTLB-loads                #    2.528 M/sec                    (29.45%)
+          7,16,976      iTLB-load-misses          #   48.62% of all iTLB cache hits   (30.75%)
+
+       0.273445078 seconds time elapsed
+
