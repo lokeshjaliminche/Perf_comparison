@@ -1,21 +1,20 @@
 
+#scripts to record IPC trace in 500 sec intervals
 
-#scripts for jpg images
+sudo rm -rf ./result/*
 
-sudo perf stat -d -d -o ./result_log/filter_jpg_500.log python3 ./jpg/filter_jpg_500.py
-sudo perf stat -d -d -o ./result_log/filter_jpg_1000.log python3 ./jpg/filter_jpg_1000.py
-sudo perf stat -d -d -o ./result_log/filter_jpg_2000.log python3 ./jpg/filter_jpg_2000.py
-sudo perf stat -d -d -o ./result_log/filter_jpg_3000.log python3 ./jpg/filter_jpg_3000.py
-sudo perf stat -d -d -o ./result_log/filter_jpg_4000.log python3 ./jpg/filter_jpg_4000.py
-sudo perf stat -d -d -o ./result_log/filter_jpg_5000.log python3 ./jpg/filter_jpg_5000.py
+sudo sh -c "/usr/bin/echo 3 > /proc/sys/vm/drop_caches"
+sudo perf stat -d -d  -I 500 -o "./result_log/filter_opencv_jpg.log" python filter_opencv_jpg.py
+
+sudo rm -rf ./result/*
+sudo sh -c "/usr/bin/echo 3 > /proc/sys/vm/drop_caches"
+sudo perf stat -d -d -I 500 -o "./result_log/filter_opencv_png.log" python filter_opencv_png.py
+
+sudo rm -rf ./result/*
+sudo sh -c "/usr/bin/echo 3 > /proc/sys/vm/drop_caches"
+sudo perf stat -d -d -I 500 -o "./result_log/filter_scikit_jpg.log" /home/kapil/anaconda3/bin/python filter_scikit_jpg.py
 
 
-
-#scripts for png images
-sudo perf stat -d -d -o ./result_log/filter_png_500.log python3 ./png/filter_png_500.py
-sudo perf stat -d -d -o ./result_log/filter_png_1000.log python3 ./png/filter_png_1000.py
-sudo perf stat -d -d -o ./result_log/filter_png_2000.log python3 ./png/filter_png_2000.py
-sudo perf stat -d -d -o ./result_log/filter_png_3000.log python3 ./png/filter_png_3000.py
-sudo perf stat -d -d -o ./result_log/filter_png_4000.log python3 ./png/filter_png_4000.py
-sudo perf stat -d -d -o ./result_log/filter_png_5000.log python3 ./png/filter_png_5000.py
-
+sudo rm -rf ./result/*
+sudo sh -c "/usr/bin/echo 3 > /proc/sys/vm/drop_caches"
+sudo perf stat -d -d -I 500 -o "./result_log/filter_scikit_png.log" /home/kapil/anaconda3/bin/python filter_scikit_png.py

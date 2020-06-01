@@ -4,7 +4,7 @@
 # Using readlines() 
 import re
 #output_file= input ("Enter file to parse:")
-output_file="./log"
+output_file="./log1"
 file1 = open(output_file, 'r') 
 Lines = file1.readlines() 
   
